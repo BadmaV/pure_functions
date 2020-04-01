@@ -1,5 +1,5 @@
 export default function calculateHealth(hero) {
-  const {health} = hero;
+  const { health } = hero;
   if (health > 50) {
     return 'healthy';
   } if (health <= 50 && health >= 15) {
@@ -8,4 +8,4 @@ export default function calculateHealth(hero) {
     return 'critical';
   }
   return 'not value';
-} 
+}

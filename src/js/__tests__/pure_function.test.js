@@ -1,7 +1,6 @@
 import calculateHealth from '../pure_function';
-import { testElement } from 'domutils';
 
-testElement('character health testing' () => {
+test('character health testing' () => {
   const input = {name: 'Leonardo', health: 90};
 
   const expected = 'healthy';
@@ -9,7 +8,7 @@ testElement('character health testing' () => {
   expect(received).toBe(expected);
 });
 
-testElement('character health testing', () => {
+test('character health testing', () => {
   const input = {name: 'rafael', health: 40};
 
   const expected = 'wounded';
@@ -22,5 +21,15 @@ test ('character health testing', () => {
 
   const expected = 'critical';
   const received = calculateHealth(input);
+  expect(received).toBe(expected);
+});
+
+test('test', () => {
+  const input = {name: 'miki', health: 'name'};
+
+  const expected = 'not value';
+
+  const received = calculateHealth(input);
+
   expect(received).toBe(expected);
 });
