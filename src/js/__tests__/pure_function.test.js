@@ -1,6 +1,6 @@
 import calculateHealth from '../pure_function';
 
-test('character health testing' () => {
+test('character health testing', () => {
   const input = {name: 'Leonardo', health: 90};
 
   const expected = 'healthy';
